@@ -1,0 +1,22 @@
+<% include header %>
+<div class='content'>
+        <button class="spotifyButton" onClick=login()>
+            <img src="/public/Spotify_Icon_RGB_White.png"/><span>Connect to Spotify</span>
+        </button>
+        <script type="text/javascript">
+            function login() {
+                fetch('/api/login')
+                    .then(r => r.json())
+                    .then((r) => {
+                        const redirectUrl = r.redirect;
+                        window.open(redirectUrl, 'Login with Spotify', 'width=800,height=600');
+                        const currentDocument = document;
+        
+                        window.closePopup = () => {
+                            currentDocument.location = '/';
+                        }
+                    });
+            }
+        </script>
+</div>
+<% include footer %>

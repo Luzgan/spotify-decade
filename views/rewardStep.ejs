@@ -1,0 +1,15 @@
+<% include header %>
+<div class='content'>
+    <span class='additionalText'>Based on your Spotify play history from the past few years, you're favourite decade
+        is...</span>
+    <span class='decade'><%= yourDecade.decade %>s</span>
+    <span class='additionalText'>(<%= yourDecade.noSongs %> out of <%= totalSongs %> your top songs are from that
+        time)</span>
+    <div class='songs'>
+        <span class='songHeader'>Your top 5 songs:</span>
+        <% topNSongs.forEach( topSong => { %>
+        <span class='song'><%= topSong.artists[0].name %> - <%= topSong.name %>, <%= topSong.album.name %></span>
+        <% }) %>
+    </div>
+</div>
+<% include footer %>
