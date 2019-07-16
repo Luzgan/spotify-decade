@@ -3,10 +3,12 @@ body {
     background-color: #f7dbbc;
     display: flex;
     justify-content: center;
-    font-size: 12px;
+    font-size: 16px;
     height: 100vh;
     margin: 0;
-    padding: 0;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 25px;
 }
 
 .content {
@@ -99,4 +101,5 @@ button {
     margin-top: 8px;
     display: flex;
     justify-content: center;
+    font-style: italic;
 }
